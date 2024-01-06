@@ -71,26 +71,5 @@ def main():
     window.mainloop()
 
 
-# def main():
-# window = tk.Tk()
-# window. title( "Text Editor")
-# window. rowconfigure(0, minsize=4Ø0)
-# window. columnconfigure(l, minsize—5ØØ)
-# text_edit : tk. Text(window, font: "Helvetica 18")
-# text_edit. grid (row=e, column—I)
-# frame - tk.Frame(window, relief-tk.RAISED, bd:2)
-# save_button tk.Button(
-# text_edit) )
-# frame, textz"Save"
-# command-lambda: save_file(window,
-# open_button : tk.Button(
-# frame, text: "Open" ,
-# command-lambda:
-# text_edit) )
-# save_button .grid(row-ø, column-Ø, padx=5, eggy-5, sticky-"ew" )
-# open_button. column=Ø, padx=5,
-# frame. gridl(row-ø, columnzø, sticky: "ns'
-# window. mainloop()
-
 if __name__ == "__main__":
     main()
