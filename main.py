@@ -2,24 +2,6 @@ import tkinter as tk
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 import os
 
-def main():
-    window = tk.Tk()
-    window.geometry("800x600")  # Set window size
-    # window.pack_slaves()  # Set window size
-
-    frame = tk.Frame(window)
-    frame.pack(fill=tk.BOTH, expand=True)  # Set frame size
-
-    text_edit = tk.Text(frame)
-    text_edit.pack(fill=tk.BOTH, expand=True)  # Let the text editor occupy the rest of the window
-    # add a vertical scroll bar to the text editor
-    scrollbar = tk.Scrollbar(text_edit, command=text_edit.yview)
-    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-    text_edit.config(yscrollcommand=scrollbar.set)
-    # scrollbar.config(command=text_edit.yview)
-
-
-    window.mainloop() 
 
 def open_file (window, text_edit) :
     filepath = askopenfilename(initialdir=os.getcwd() ,filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")],defaultextension="txt")
@@ -49,14 +31,16 @@ def main():
     #set title to Text Editor
     window.title("Text Editor")
     #set size of window
-    # window.geometry("800x600")
-
+    window.geometry("600x600")
+    #set minimum size of window
+    window.minsize(400, 400)
+    
     #create text editor frame
     text_frame = tk.Frame(window)
     text_frame.pack(fill=tk.BOTH, expand=True)  # Set frame size
 
     #create text editor
-    text_edit = tk.Text(text_frame, font="Helvetica 18")
+    text_edit = tk.Text(text_frame, font="Helvetica 18",height=1,width=1)
     text_edit.pack(side="left",fill=tk.BOTH ,expand=True)  # Let the text editor occupy the rest of the window
 
     #create scrollbar
